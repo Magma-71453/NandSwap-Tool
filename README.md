@@ -3,7 +3,10 @@ Allows you to customize Color OS's zram and swap
 
 __How to use it？__
 
-执行下载来的sh
+下拉找到“release”
+下载 default.sh
+转到下载路径
+执行
 
 Then，你将会在执行目录下得到两个文件
 
