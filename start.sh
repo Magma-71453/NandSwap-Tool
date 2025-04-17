@@ -75,10 +75,7 @@ echo 4 > /sys/block/zram0/max_comp_streams
 sync
 swapoff /dev/block/zram0 >/dev/null 2>&1
 echo 1 > /sys/block/zram0/reset
-echo 0 > /sys/block/zram0/disksize
 echo "$COMP_ALG" > /sys/block/zram0/comp_algorithm
-#echo "${ZRAM_MB} * 1024 " > /sys/block/zram0/disksize
-#echo $((ZRAM_MB * 1024 * 1024)) > /sys/block/zram0/disksize
 disksize=$(expr $ZRAM_MB \* 1024 \* 1024)
 echo $disksize > /sys/block/zram0/disksize
 mkswap /dev/block/zram0
